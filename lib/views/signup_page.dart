@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../viewmodels/auth_viewmodel.dart';
 
 class SignUpPage extends ConsumerStatefulWidget {
@@ -41,7 +40,6 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
           .read(authViewModelProvider.notifier)
           .signUp(_emailCtrl.text, _nameCtrl.text, _passwordCtrl.text);
       if (mounted) {
-        // Pop back to root (which will now show HomePage due to auth state)
         Navigator.of(context).popUntil((route) => route.isFirst);
       }
     } catch (e) {
@@ -63,9 +61,10 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
+            stops: [0.5, 0.1],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFF2D2D44), Color(0xFF1E1E2C)],
+            colors: [Color(0xFF1E1E2C), Color(0xFF2D2D44)],
           ),
         ),
         child: Center(

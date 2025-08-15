@@ -1,6 +1,5 @@
 class HiveKeys {
-  static const users =
-      'users'; // box name; stores email -> {name, passwordHash}
-  static const session = 'session'; // box name; stores {currentEmail}
+  static const users = 'users';
+  static const session = 'session';
   static const currentEmail = 'currentEmail';
 }

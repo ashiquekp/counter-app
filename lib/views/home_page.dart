@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../viewmodels/auth_viewmodel.dart';
 import '../viewmodels/counter_viewmodel.dart';
 
@@ -100,6 +99,6 @@ class CounterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: onPressed, child: Icon(icon));
+    return ElevatedButton(onPressed: onPressed, child: Icon(icon, size: 20));
   }
 }

@@ -21,7 +21,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo);
     return MaterialApp(
-      title: 'Riverpod MVVM Auth + Counter',
+      title: 'Counter App',
       theme: theme,
       home: const RootGate(),
       debugShowCheckedModeBanner: false,
@@ -29,7 +29,6 @@ class MyApp extends ConsumerWidget {
   }
 }
 
-/// Decides where to go based on auth state
 class RootGate extends ConsumerWidget {
   const RootGate({super.key});
 

@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:hive/hive.dart';
-
 import '../core/hive_keys.dart';
 import '../models/app_user.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../viewmodels/auth_viewmodel.dart';
 import 'signup_page.dart';
 
@@ -55,6 +54,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
+            stops: [0.5, 0.1],
+            tileMode: TileMode.clamp,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [Color(0xFF2D2D44), Color(0xFF1E1E2C)],

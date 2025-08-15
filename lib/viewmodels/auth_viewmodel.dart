@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../models/app_user.dart';
 import '../repositories/auth_repository.dart';
 
@@ -10,7 +9,6 @@ final authRepositoryProvider = Provider<AuthRepository>(
 class AuthViewModel extends Notifier<AppUser?> {
   @override
   AppUser? build() {
-    // Load session on startup
     final repo = ref.read(authRepositoryProvider);
     return repo.getCurrentUser();
   }
@@ -18,10 +16,7 @@ class AuthViewModel extends Notifier<AppUser?> {
   Future<void> signUp(String email, String name, String password) async {
     final repo = ref.read(authRepositoryProvider);
     await repo.signUp(email: email, name: name, password: password);
-    final user = await repo.login(
-      email: email,
-      password: password,
-    ); // auto-login
+    final user = await repo.login(email: email, password: password);
     state = user;
   }
 
